@@ -12,3 +12,4 @@ describe('isPalindrome', function () {
     assert.equal(isPalindrome(0), true);
   });
 })
+
