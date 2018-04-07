@@ -9,7 +9,7 @@ var lengthOfLongestSubstring = function (s) {
   chars.fill(-1);
   var length = 0;
   var i = 0, j = 0;
-  for (; j < s.length; j++) {
+  for (; j < s.length; j++) { // slide window
     i = Math.max(i, chars[s.charCodeAt(j)]);
     length = Math.max(length, j - i + 1);
     chars[s.charCodeAt(j)] = j + 1;
