@@ -4,11 +4,12 @@
  */
 var isValid = function (s) {
   var stack = [];
+  var map = { '}': '{', ')': '(', ']': '[' };
   i = -1;
   while (++i < s.length) {
     if (s[i] === '(' || s[i] === '{' || s[i] === '[') {
       stack.push(s[i]);
-    } else if (stack.pop() !== s[i]) {
+    } else if (stack.pop() !== map[s[i]]) {
       return false;
     }
   }
