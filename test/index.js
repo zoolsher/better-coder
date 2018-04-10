@@ -1,20 +1,13 @@
-var removeNthFromEnd = require('./../better-code/removeNthFromEnd');
+var generate = require('./../better-code/generateParenthesis');
 var assert = require('assert');
+const { performance } = require('perf_hooks');
 
-function ListNode(val) {
-  this.val = val;
-  this.next = null;
-}
-
-function createList(arr) {
-  var dummyHead = new ListNode(0);
-  var cur = dummyHead;
-  for (var i = 0; i < arr.length; i++) {
-    cur.next = new ListNode(arr[i]);
-    cur = cur.next;
-  }
-  return dummyHead.next;
-}
-var list = createList([1,2]);
-
-removeNthFromEnd(list, 1);
+var res = ['((()))', '(()())', '(())()', '()(())', '()()()'];
+describe('3', function() {
+  it('3', function() {
+    var a = performance.now('a');
+    assert.deepEqual(generate(3), res);
+    var b = performance.now('a');
+    console.log('time: ' + (b - a));
+  });
+});
