@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowJs": false,
+    "alwaysStrict": true,
+    "importHelpers": false,
+    "lib": [
+      "es5",
+      "es6"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "outDir": "./lib",
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "better-code"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
